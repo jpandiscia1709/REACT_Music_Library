@@ -28,6 +28,21 @@ class App extends Component {
     });
   }
 
+  renderTableData() {
+    return this.state.songs.map((song, index) => {
+       const { id, artist, title, album, release_date } = song
+       return (
+          <tr key={id}>
+             <td>{id}</td>
+             <td>{artist}</td>
+             <td>{title}</td>
+             <td>{album}</td>
+             <td>{release_date}</td>
+             
+          </tr>
+       )
+    })
+ }
 
 
   render () {
@@ -36,7 +51,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Music Library</h1>
           <p>
-            Table of songs here
+            {this.renderTableData()}
           </p>
           <h3>form to add songs</h3>
         </header>
