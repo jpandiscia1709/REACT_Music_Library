@@ -5,14 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* img {
+    float: right;
+  } */
 }
-
+  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-table {
-
+div {
+  color:navy;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  /* background-image: url('https://i.etsystatic.com/9607667/r/il/eaa22b/614942243/il_794xN.614942243_gc2p.jpg'); */
+  background-color: forestgreen;
   
+}
+
+table, th, td {
+  
+  border: 1px solid ;
+
 }

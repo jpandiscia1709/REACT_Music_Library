@@ -35,7 +35,7 @@ class App extends Component {
         //  <table>
         
           <tr key={id}>
-             <td><button>del</button> {id}</td>
+             <td><button>delete</button> {id}</td>
              <td>{artist}</td>
              <td>{title}</td>
              <td>{album}</td>
@@ -56,6 +56,7 @@ class App extends Component {
         </header>
 
 
+          <tbody>
        <table>
         <tr>
 
@@ -64,22 +65,23 @@ class App extends Component {
            <th>Title</th>
            <th>Album</th>
            <th>Released</th>
-          </tr>
-          <tbody>
+        </tr>
             {/* <tr>{this.renderTableHeader()}</tr> */}
             {/* <MusicTable musicTable={this.state.songs}/> */}
 
             {this.renderTableData()}
-
-          </tbody>
+            
         </table>
 
-        <button>Click to Add Song</button>
-        <button>Click to Search</button>
+        
+          </tbody>
+
+          <button>Click to Add Song</button>
+          <button>Click to Search</button>
+          
+
       </div>
       
-
-
       
     );  
   }
