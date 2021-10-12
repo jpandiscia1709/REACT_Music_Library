@@ -2,7 +2,7 @@
 import './App.css';
 import axios from 'axios';
 import React, { Component } from 'react';
-
+// import MusicTable from './components/MusicTable/MusicTable'
 
 
 class App extends Component {
@@ -32,14 +32,17 @@ class App extends Component {
     return this.state.songs.map((song, index) => {
        const { id, artist, title, album, release_date } = song
        return (
+        //  <table>
+          
           <tr key={id}>
-             <td>{id}</td>
+             <td><button>delete</button> {id}</td>
              <td>{artist}</td>
              <td>{title}</td>
              <td>{album}</td>
              <td>{release_date}</td>
-             
+
           </tr>
+          // </table>
        )
     })
  }
@@ -48,14 +51,36 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Music Library</h1>
-          <p>
-            {this.renderTableData()}
-          </p>
-          <h3>form to add songs</h3>
+        <header> 
+        <h1>Music Library</h1>
         </header>
+
+
+        <table>
+        <tr>
+
+           <th>ID</th>
+           <th>Artist</th>
+           <th>Title</th>
+           <th>ALbum</th>
+           <th>Released</th>
+          </tr>
+          <tbody>
+            {/* <tr>{this.renderTableHeader()}</tr> */}
+            {/* <MusicTable musicTable={this.state.songs}/> */}
+
+            {this.renderTableData()}
+
+          </tbody>
+        </table>
+
+        <button>Click to Add Song</button>
+        <button>Click to Search</button>
       </div>
+      
+
+
+      
     );  
   }
 }
