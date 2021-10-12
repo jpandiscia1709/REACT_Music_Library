@@ -33,9 +33,9 @@ class App extends Component {
        const { id, artist, title, album, release_date } = song
        return (
         //  <table>
-          
+        
           <tr key={id}>
-             <td><button>delete</button> {id}</td>
+             <td><button>del</button> {id}</td>
              <td>{artist}</td>
              <td>{title}</td>
              <td>{album}</td>
@@ -56,13 +56,13 @@ class App extends Component {
         </header>
 
 
-        <table>
+       <table>
         <tr>
 
            <th>ID</th>
            <th>Artist</th>
            <th>Title</th>
-           <th>ALbum</th>
+           <th>Album</th>
            <th>Released</th>
           </tr>
           <tbody>
